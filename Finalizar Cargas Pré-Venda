@@ -1,0 +1,42 @@
+import pandas as pd
+import pyautogui as py
+
+def lerCargas():
+    cargas = pd.read_excel(r"C:\Users\rayde\OneDrive\Ambiente de Trabalho\cargas a finalizar.xlsx") # Lê a planilha
+    return cargas["Carga PV"] # Retorna a coluna "Carga PV"
+
+def finalizarCargas(cargas_pv):
+    for carga in cargas_pv:
+        py.moveTo(x=40, y=166)
+        py.doubleClick()
+        py.press('backspace')
+        py.doubleClick()
+        py.press('backspace')
+        py.write(str(carga), interval=0.1)
+        py.press('enter')
+        py.sleep(8)
+        py.moveTo(x=66, y=672)
+        py.click()
+        py.sleep(3.5)
+        py.moveTo(x=684, y=221)
+        py.sleep(3.5)
+        py.doubleClick()
+        py.hotkey('ctrl', 'c')
+        py.press('tab')
+        py.sleep(3)
+        py.hotkey('ctrl', 'v')
+        py.press('tab')
+        py.sleep(3.5)
+        py.moveTo(x=561, y=569)
+        py.click()
+        py.sleep(10)
+
+py.sleep(3)
+
+try:
+    cargas_pv = lerCargas() # Atribui a coluna "Carga PV" a uma variável
+    finalizarCargas(cargas_pv) # Executa a função finalizarCargas usando a variável cargas_pv como argumento
+except:
+    py.alert('     Processo interrompido!')
+finally:
+    py.alert('     CARGAS PROCESSADAS!')
