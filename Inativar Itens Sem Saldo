@@ -22,7 +22,6 @@ def inativar_itens_sem_saldo():
 
 try:
     tabela = pd.read_excel(r"C:\Users\rayde\OneDrive\Ambiente de Trabalho\itens a inativar.xlsx")
-    display(tabela)
     inativar_itens_sem_saldo()
 
 except py.FailSafeException:
