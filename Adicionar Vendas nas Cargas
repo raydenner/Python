@@ -6,7 +6,7 @@ quick = py.confirm('Qual a velocidade atual do sistema?', buttons = ['Rápido', 
 if quick == 'Rápido':
     tempo = 2.5
 else:
-    tempo = 5
+    tempo = 6
 
 # coleta do usuário a primeira e a última carga a serem adicionadas as vendas
 cg_inicial = int(py.prompt("Carga Inicial:"))
