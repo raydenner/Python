@@ -1,6 +1,10 @@
 import pandas as pd
 import pyautogui as py
 
+def clica_apaga():
+    py.doubleClick()
+    py.press('backspace')
+
 def lerCargas():
     cargas = pd.read_excel(r"C:\Users\rayde\OneDrive\Ambiente de Trabalho\cargas a finalizar.xlsx") # Lê a planilha
     return cargas["Carga PV"] # Retorna a coluna "Carga PV"
@@ -8,14 +12,10 @@ def lerCargas():
 def finalizarCargas(cargas_pv):
     for carga in cargas_pv:
         py.moveTo(x=40, y=166)
-        py.doubleClick()
-        py.press('backspace')
-        py.doubleClick()
-        py.press('backspace')
-        py.doubleClick()
-        py.press('backspace')
-        py.doubleClick()
-        py.press('backspace')
+        clica_apaga()
+        clica_apaga()
+        clica_apaga()
+        clica_apaga()
         py.write(str(carga), interval=0.1)
         py.press('enter')
         py.sleep(9)
