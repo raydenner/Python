@@ -34,9 +34,10 @@ def finalizarCargas(cargas_pv):
 py.sleep(3)
 
 try:
-    cargas_pv = lerCargas() # Atribui a coluna "Carga PV" a uma variável
-    finalizarCargas(cargas_pv) # Executa a função finalizarCargas usando a variável cargas_pv como argumento
-except:
-    py.alert('     Processo interrompido!')
+    cargas_pv = lerCargas()
+    finalizarCargas(cargas_pv)
+except Exception as erro:
+    print(f"Ocorreu uma exceção: {str(erro)}")
+    py.alert('Processo interrompido!')
 finally:
-    py.alert('     CARGAS PROCESSADAS!')
+    py.alert('CARGAS FINALIZADAS!')
