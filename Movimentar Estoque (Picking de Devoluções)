@@ -2,7 +2,7 @@ import pandas as pd
 import pyautogui as py
 
 pick = pd.read_excel(r"C:\Users\rayde\OneDrive\Ambiente de Trabalho\pick retorno a movimentar.xlsx")
-display(pick)
+print(pick)
 
 for _, row in pick.iterrows():
     produto = str(row["Produto"])
