@@ -1,11 +1,12 @@
-# *** PARA PRODUÇÃO NO REMMINA ***
+# *** PARA PRODUÇÃO NO REMMINA  ***
+# ***   ATUALIZADO EM 26/10/2023 - BIG LINUX  ***
 
 import pyautogui as py
 
 # define a velocidade com a qual a automação vai proceder
 quick = py.confirm('Qual a velocidade atual do sistema?', buttons = ['Rápido', 'Lento'])
 if quick == 'Rápido':
-    tempo = 4
+    tempo = 2.5
 else:
     tempo = 6
 
@@ -18,10 +19,10 @@ lista_cargas = list(range(cg_inicial, cg_final+1))
 
 # percorre a lista das cargas adicionando as vendas
 for carga in lista_cargas:
-    py.click(x=57, y=257, clicks=2) # campo Carga
+    py.click(x=48, y=208, clicks=2) # campo Carga
     py.sleep(tempo)
     py.press('backspace')
-    py.click(x=57, y=257, clicks=2) # campo Carga
+    py.click(x=48, y=208, clicks=2) # campo Carga
     py.sleep(1)
     py.press('backspace')
     py.sleep(tempo)
@@ -30,7 +31,7 @@ for carga in lista_cargas:
     py.sleep(tempo)
     py.press('f2')
     py.sleep(tempo)
-    py.click(x=532, y=403) # clica na tela antes do ctrl + a
+    py.click(x=573, y=354) # clica na tela antes do ctrl + a
     py.sleep(tempo)
     py.hotkey('ctrl', 'a')
     py.sleep(tempo)
