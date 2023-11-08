@@ -2,11 +2,7 @@ import pyautogui as py
 import ctypes as ct
 
 # define a velocidade com a qual a automação vai proceder
-quick = py.confirm('Qual a velocidade atual do sistema?', buttons = ['Rápido', 'Lento'])
-if quick == 'Rápido':
-    tempo = 2.5
-else:
-    tempo = 6
+tempo = 3
 
 # coleta do usuário a primeira e a última carga a serem adicionadas as vendas
 cg_inicial = int(py.prompt("Carga Inicial:"))
@@ -21,7 +17,7 @@ for carga in lista_cargas:
     py.sleep(tempo)
     py.press('backspace')
     py.click(x=42, y=171, clicks=2)
-    py.sleep(1)
+    py.sleep(2)
     py.press('backspace')
     py.sleep(tempo)
     py.write(str(carga))

@@ -15,3 +15,5 @@ for _, row in pick.iterrows():
     py.write(quantidade, interval=0.1)
     py.press(['enter', 'enter'], interval=0.1)
     py.sleep(0.4)
+
+py.alert("Processo concluído! Por favor, confira a quantidade movimentada.")
