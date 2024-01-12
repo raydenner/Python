@@ -16,4 +16,4 @@ for _, row in pick.iterrows():
     py.press(['enter', 'enter'], interval=0.1)
     py.sleep(0.4)
 
-py.alert("Processo concluído! Por favor, confira a quantidade movimentada.")
+py.alert("Processo concluído. Por favor, confira a quantidade de volumes antes de processar o movimento de estoque.")
