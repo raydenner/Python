@@ -6,13 +6,13 @@ Este repositório contém scripts em Python para gerenciamento de cargas, vendas
 
 Python/
 ├── src/ # Scripts Python
-│ ├── add_vendas.py
-│ ├── add_vendas_remmina.py
-│ ├── movimentar_estoque.py
-│ ├── finalizar_cargas.py
-│ └── inativar_itens.py
+│   ├── add_vendas.py
+│   ├── add_vendas_remmina.py
+│   ├── movimentar_estoque.py
+│   ├── finalizar_cargas.py
+│   └── inativar_itens.py
 ├── data/ # Arquivos de dados (Excel, CSV)
-│ └── pick_devolucoes.xlsx
+│   └── pick_devolucoes.xlsx
 ├── venv/ # Ambiente virtual (ignorando pelo Git)
 ├── README.md
 └── .gitignore
