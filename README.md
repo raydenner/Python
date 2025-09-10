@@ -2,7 +2,7 @@
 
 Este repositório contém scripts em Python para gerenciamento de cargas, vendas e movimentação de estoque.
 
-## Estrutura do Projeto
+# Estrutura do projeto Python
 
 Python/
 ├── src/                 # Scripts Python
