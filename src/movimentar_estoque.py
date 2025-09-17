@@ -1,7 +1,7 @@
 import pandas as pd
 import pyautogui as py
 
-pick = pd.read_excel(r"/home/ray/Py/Python/pick_devolucoes.xlsx")
+pick = pd.read_excel(r"/home/ray/Py/Python/data/pick_devolucoes.xlsx")
 pick.info()
 
 for _, row in pick.iterrows():
